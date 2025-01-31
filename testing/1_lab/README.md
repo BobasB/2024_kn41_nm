@@ -24,11 +24,42 @@ deactivate
 
 
 pip install pipenv
+export PIPENV_VENV_IN_PROJECT=1
 pipenv -h
 
 pipenv install requests
 pipenv shell
 python 1.py
 
-deactivate
+pipenv graph
 
+exit
+pipenv --rm
+
+# Встановлення poetry на Windows
+curl -sSL https://install.python-poetry.org | python3 -
+
+poetry -h
+cd env_with_poetry
+poetry init
+poetry add numpy
+poetry add pandas
+poetry shell
+
+pip list
+python 1.py
+exit
+poetry add flake8 --dev
+poetry install --with dev
+poetry shell
+
+pip list
+flake8 .
+
+deactivate
+poetry env list
+poetry env info
+poetry env -h
+poetry -h
+poetry config -h
+poetry show
