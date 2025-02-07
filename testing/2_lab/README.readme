@@ -1,0 +1,14 @@
+```bash
+
+poetry env remove --all
+poetry config virtualenvs.in-project true
+
+poetry install
+
+poetry shell
+python program/main.py
+python -m unittest -v ./tests/main.py 
+exit
+
+
+poetry env remove --all
