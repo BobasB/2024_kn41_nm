@@ -20,7 +20,8 @@
 
 from bank import BankAccount
 
-b = BankAccount("Богдан", 1.1)
+b = BankAccount("", 1.1)
 print(f"Баланс {b.owner}: {b.get_balance()}")
 b.deposit(2.5)
 print(f"Баланс {b.owner}: {b.get_balance()}")
+print(dir(BankAccount))

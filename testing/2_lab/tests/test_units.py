@@ -1,0 +1,46 @@
+import unittest
+from random import choice, randint
+
+from program.bank import BankAccount
+
+class TestProgram(unittest.TestCase):
+    def setUp(self):
+        self.name = choice(["Богдан", "Антон", "Максим"])
+        self.number = randint(50, 100) # початковий баланс акаунту
+        self.obj = BankAccount(self.name, self.number)
+        return super().setUp()
+
+    def test_obj_created(self):
+        #obj = BankAccount("Богдан", 100)
+        self.assertIsInstance(self.obj, BankAccount, f"Створений обєкт не нележить до класу {BankAccount}")
+        self.assertTrue(len(self.obj.owner) > 0, "Імя власника має бути більше за 0")
+        self.assertEqual(self.obj.owner, self.name, "Атрибут owner повинен дорівнювати Богдан")
+        self.assertIsInstance(self.obj.owner, str, "Імя власника має бути стрічкового типу")
+        
+        with self.assertRaises(ValueError):
+            print("Цей код виконується, і тут помила коректно опрацьовується!")
+            obj2 = BankAccount("", -10)
+
+        self.assertNotEqual(self.obj.balance, -1, "Баланс нового власника не можу бути рівним -1")
+
+    def test_bankaccount_deposit(self):
+        #b = 100
+        #obj = BankAccount("Богдан", b)
+        add_bal = 10
+        self.obj.deposit(add_bal)
+        self.assertEqual(self.obj.balance, self.number + add_bal, "При додаванні депозиту сімма має збільшуватись!")
+        with self.assertRaises(ValueError, msg="Неправильно опарцьовується внесення депозиту"):
+            self.obj.deposit(-50)
+        self.assertGreater(self.obj.balance, self.number, "Після збільшення депозиту баланс має зрости")
+        self.assertIsNotNone(self.obj.deposit(10), "Цей метод не повинен повертати None")
+    
+    def test_example(self):
+        self.assertTrue(True, "True неправильно працює!")
+    
+    def test_should_fail(self):
+        self.assertEqual(1, 1, "Число не є символом!")
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
+

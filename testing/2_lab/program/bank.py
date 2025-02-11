@@ -3,6 +3,8 @@ class BankAccount:
 
     def __init__(self, owner: str, balance: float = 0.0):
         """Ініціалізація рахунку з іменем власника та початковим балансом"""
+        if len(owner) <= 0:
+            raise ValueError("Імя власника не може бути меншим 0!")
         self.owner = owner
         self.balance = balance
 
