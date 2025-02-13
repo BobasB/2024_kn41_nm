@@ -1,4 +1,5 @@
 import unittest
+import pytest
 from random import choice, randint
 
 from program.bank import BankAccount
@@ -33,14 +34,34 @@ class TestProgram(unittest.TestCase):
             self.obj.deposit(-50)
         self.assertGreater(self.obj.balance, self.number, "Після збільшення депозиту баланс має зрости")
         self.assertIsNotNone(self.obj.deposit(10), "Цей метод не повинен повертати None")
-    
+
     def test_example(self):
         self.assertTrue(True, "True неправильно працює!")
-    
+
     def test_should_fail(self):
         self.assertEqual(1, 1, "Число не є символом!")
 
 
+@pytest.fixture
+def try_my_fixture():
+    o = BankAccount("N", 500)
+    print(o.owner)
+    return f"Ми спобували Фікстури, Власник = {o.owner}"
+
+
+@pytest.fixture
+def try_my_object():
+    o = BankAccount("N", 500)
+    return f"Знову спобували Фікстури, баланс = {o.balance}"
+
+
+def test_not_in_class(try_my_fixture, try_my_object):
+    assert 1 == 1, "Тут 1 має бути рівним 1"
+    print(try_my_fixture)
+    assert isinstance(try_my_fixture, str), "Фікстура має повернути стрічку"
+    assert "Власник" in try_my_fixture, "Неправильний вивід"
+    assert "баланс" in try_my_object, "Неправильний вивід"
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
-

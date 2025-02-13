@@ -27,3 +27,13 @@ class BankAccount:
     def get_balance(self):
         """Отримання балансу"""
         return self.balance
+
+def test_bank_get_balance():
+    a = BankAccount("Б", 1.1)
+    assert a.get_balance() == 1.1, "Неправильно повертає початковий баланс"
+    assert isinstance(a.get_balance(), float), "Первернене значення має бути Float"
+
+
+if __name__ == "__main__":
+    a = BankAccount("Б", 1.1)
+    print(f"Вивід з модуля, імя = {a.owner}")

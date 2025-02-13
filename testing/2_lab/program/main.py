@@ -18,10 +18,11 @@
 # b = MyName("123")
 # print(f"Імя першого обєкта: {a.name} та другого: {b.name}")
 
-from bank import BankAccount
+import bank
 
-b = BankAccount("", 1.1)
-print(f"Баланс {b.owner}: {b.get_balance()}")
-b.deposit(2.5)
-print(f"Баланс {b.owner}: {b.get_balance()}")
-print(dir(BankAccount))
+if __name__ == "__main__":
+    b = bank.BankAccount("БвБ", 1.1)
+    print(f"Баланс {b.owner}: {b.get_balance()}")
+    b.deposit(2.5)
+    print(f"Баланс {b.owner}: {b.get_balance()}")
+    print(dir(bank.BankAccount))
