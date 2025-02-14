@@ -3,7 +3,7 @@ name = "2-lab"
 version = "0.1.0"
 description = ""
 authors = ["bbuhyl <bbuhyl@cisco.com>"]
-readme = "README.readme"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
