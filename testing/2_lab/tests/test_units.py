@@ -12,6 +12,8 @@ class TestProgram(unittest.TestCase):
         return super().setUp()
 
     def test_obj_created(self):
+        """Тестуємо створення обєкта
+        """
         #obj = BankAccount("Богдан", 100)
         self.assertIsInstance(self.obj, BankAccount, f"Створений обєкт не нележить до класу {BankAccount}")
         self.assertTrue(len(self.obj.owner) > 0, "Імя власника має бути більше за 0")
@@ -36,10 +38,13 @@ class TestProgram(unittest.TestCase):
         self.assertIsNotNone(self.obj.deposit(10), "Цей метод не повинен повертати None")
 
     def test_example(self):
-        self.assertTrue(True, "True неправильно працює!")
+        self.assertTrue(False, "True неправильно працює!")
 
     def test_should_fail(self):
         self.assertEqual(1, 1, "Число не є символом!")
+    
+    def test_no_asserts_in_test(self):
+        print("Тест запуститься але він нічого не тестує")
 
 
 @pytest.fixture
