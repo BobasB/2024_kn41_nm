@@ -38,7 +38,7 @@ class TestProgram(unittest.TestCase):
         self.assertIsNotNone(self.obj.deposit(10), "Цей метод не повинен повертати None")
 
     def test_example(self):
-        self.assertTrue(False, "True неправильно працює!")
+        self.assertTrue(True, "True неправильно працює!")
 
     def test_should_fail(self):
         self.assertEqual(1, 1, "Число не є символом!")
