@@ -46,6 +46,11 @@ class TestProgram(unittest.TestCase):
     def test_no_asserts_in_test(self):
         print("Тест запуститься але він нічого не тестує")
 
+    def test_make_it_great_again(self):
+        assert self.obj.withdraw(20) < self.number, "Все пропало"
+        with self.assertRaises(ValueError):
+            self.obj.withdraw(-20)
+
 
 @pytest.fixture
 def try_my_fixture():
