@@ -26,9 +26,10 @@ jobs:
     - name: Setup Poetry
       uses: Gr1N/setup-poetry@v9
     - name: Install dependency
+      working-directory: ./testing/2_lab
       run: |
-        cd testing/2_lab
         poetry install --no-root
     - name: Test with pytest
+      working-directory: ./testing/2_lab
       run: |
         poetry run coverage run -m pytest
