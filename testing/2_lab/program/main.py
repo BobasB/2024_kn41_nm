@@ -17,8 +17,10 @@
 # a = MyName("Богдан")
 # b = MyName("123")
 # print(f"Імя першого обєкта: {a.name} та другого: {b.name}")
+def new_fun():
+    return 50
 
-import bank
+from  program import bank
 
 if __name__ == "__main__":
     b = bank.BankAccount("БвБ", 1.1)

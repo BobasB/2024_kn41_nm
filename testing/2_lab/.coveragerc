@@ -1,0 +1,9 @@
+[report]
+exclude_also = 
+    if __name__ == "__main__":
+    def test_*
+
+[run]
+omit =
+    __init__.py
+    tests/*

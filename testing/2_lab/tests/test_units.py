@@ -50,6 +50,9 @@ class TestProgram(unittest.TestCase):
         assert self.obj.withdraw(20) < self.number, "Все пропало"
         with self.assertRaises(ValueError):
             self.obj.withdraw(-20)
+        # тестуємо розгалуження
+        with self.assertRaises(ValueError):
+            self.obj.withdraw(1000)
 
 
 @pytest.fixture
@@ -64,6 +67,10 @@ def try_my_object():
     o = BankAccount("N", 500)
     return f"Знову спобували Фікстури, баланс = {o.balance}"
 
+@pytest.fixture
+def define_object():
+    return BankAccount("Bohdan", 500)
+
 
 def test_not_in_class(try_my_fixture, try_my_object):
     assert 1 == 1, "Тут 1 має бути рівним 1"
@@ -71,6 +78,10 @@ def test_not_in_class(try_my_fixture, try_my_object):
     assert isinstance(try_my_fixture, str), "Фікстура має повернути стрічку"
     assert "Власник" in try_my_fixture, "Неправильний вивід"
     assert "баланс" in try_my_object, "Неправильний вивід"
+
+def test_bank_property(define_object):
+    print(f"Тестуємо: {define_object.owner}")
+    assert define_object.get_balance == define_object.balance, "Неправильно виводиться баланс"
 
 
 if __name__ == '__main__':

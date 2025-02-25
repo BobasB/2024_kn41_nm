@@ -24,6 +24,7 @@ class BankAccount:
         self.balance -= amount
         return self.balance
 
+    @property
     def get_balance(self):
         """Отримання балансу"""
         return self.balance
