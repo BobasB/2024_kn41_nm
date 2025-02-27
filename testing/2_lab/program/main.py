@@ -20,11 +20,11 @@
 def new_fun():
     return 50
 
-from  program import bank
+from program import bank
 
 if __name__ == "__main__":
     b = bank.BankAccount("БвБ", 1.1)
-    print(f"Баланс {b.owner}: {b.get_balance()}")
+    print(f"Баланс {b.owner}: {b.get_balance}")
     b.deposit(2.5)
-    print(f"Баланс {b.owner}: {b.get_balance()}")
+    print(f"Баланс {b.owner}: {b.get_balance}")
     print(dir(bank.BankAccount))

@@ -7,10 +7,36 @@ permissions:
   contents: read
 
 jobs:
-    build:
+    one:
         runs-on: ubuntu-latest
         steps:
-            - name: hello
+            - uses: actions/checkout@v4
+            - name: Set up Python 3.12
+              uses: actions/setup-python@v3
+              with:
+                python-version: "3.12"
+            - name: Setup Poetry
+              uses: Gr1N/setup-poetry@v9
+            - name: hello from one
+              working-directory: ./testing/2_lab
               run: |
-                echo Hellow
+                echo Start first workflow
+                export PYTHONPATH=./ && poetry run python -m pytest -v ./tests/test_pytest.py
+            
+    two:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set up Python 3.12
+              uses: actions/setup-python@v3
+              with:
+                python-version: "3.12"
+            - name: Setup Poetry
+              uses: Gr1N/setup-poetry@v9
+            - name: hello from two
+              working-directory: ./testing/2_lab
+              run: |
+                echo Hello, we running app
+                export PYTHONPATH=./ && poetry run python program/main.py
+
 
