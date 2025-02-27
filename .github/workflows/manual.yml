@@ -17,6 +17,10 @@ jobs:
                 python-version: "3.12"
             - name: Setup Poetry
               uses: Gr1N/setup-poetry@v9
+            - name: Install dependency
+              working-directory: ./testing/2_lab
+              run: |
+                poetry install --no-root
             - name: hello from one
               working-directory: ./testing/2_lab
               run: |
@@ -33,6 +37,10 @@ jobs:
                 python-version: "3.12"
             - name: Setup Poetry
               uses: Gr1N/setup-poetry@v9
+            - name: Install dependency
+              working-directory: ./testing/2_lab
+              run: |
+                poetry install --no-root
             - name: hello from two
               working-directory: ./testing/2_lab
               run: |
