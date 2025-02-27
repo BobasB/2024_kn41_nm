@@ -1,0 +1,16 @@
+name: Manual
+
+on:
+    workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: hello
+              run: |
+                echo Hellow
+
