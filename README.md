@@ -1,5 +1,7 @@
 [![Manual](https://github.com/BobasB/2024_kn41_nm/actions/workflows/manual.yml/badge.svg)](https://github.com/BobasB/2024_kn41_nm/actions/workflows/manual.yml)
 [![Run Tests](https://github.com/BobasB/2024_kn41_nm/actions/workflows/python-app.yml/badge.svg)](https://github.com/BobasB/2024_kn41_nm/actions/workflows/python-app.yml)
+![GitHub Pipenv locked dependency version](https://img.shields.io/github/pipenv/locked/dependency-version/bobasb/2024_kn41_nm/testing%2F1_lab%2Fenv_with_pipenv%2F)
+
 
 # Лабораторні роботи з предмету "Чисельні методи", "Методи Мат-моделювання" та "Тестування"
 
