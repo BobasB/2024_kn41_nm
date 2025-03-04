@@ -1,3 +1,6 @@
+[![Manual](https://github.com/BobasB/2024_kn41_nm/actions/workflows/manual.yml/badge.svg)](https://github.com/BobasB/2024_kn41_nm/actions/workflows/manual.yml)
+[![Run Tests](https://github.com/BobasB/2024_kn41_nm/actions/workflows/python-app.yml/badge.svg)](https://github.com/BobasB/2024_kn41_nm/actions/workflows/python-app.yml)
+
 # Лабораторні роботи з предмету "Чисельні методи", "Методи Мат-моделювання" та "Тестування"
 
 ### Опис
