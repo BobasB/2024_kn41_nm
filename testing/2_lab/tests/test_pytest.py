@@ -7,3 +7,7 @@ def test_for_pytest():
 
 def test_new_fun():
     assert new_fun() == 50, "Неправиильно певернуте значення"
+
+def test_fail():
+    assert True == False
+
