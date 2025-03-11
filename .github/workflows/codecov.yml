@@ -37,7 +37,7 @@ jobs:
       if: always()
       working-directory: ./testing/2_lab
       run: |
-        poetry run coverage xml
+        poetry run pytest --cov --junitxml=junit.xml -o junit_family=legacy
     - name: Upload test results to Codecov
       if: ${{ !cancelled() }}
       uses: codecov/test-results-action@v1
