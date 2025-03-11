@@ -38,4 +38,4 @@ jobs:
       uses: codecov/codecov-action@v5
       with:
         directory: ./testing/2_lab
-        #token: ${{ secrets.CODECOV_TOKEN }}
+        token: ${{ secrets.CODECOV_TOKEN }}
