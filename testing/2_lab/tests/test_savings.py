@@ -9,4 +9,4 @@ class TestSavingsAccount(unittest.TestCase):
         self.savings = SavingsAccount("Alice", 1000.0, 0.05)
 
     def test_arguments(self):
-        self.assertNotEqual(self.savings, 0, "Збереження більші за 0")
+        self.assertEqual(self.savings, 0, "Збереження більші за 0")
