@@ -39,3 +39,9 @@ poetry run pytest program/bank.py -v
 
 poetry run flake8 tests/test_units.py
 ```
+
+## Запуск програми
+```
+export PYTHONPATH=./
+poetry run python program/main.py
+```

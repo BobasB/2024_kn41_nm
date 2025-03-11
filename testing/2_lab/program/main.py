@@ -21,6 +21,7 @@ def new_fun():
     return 50
 
 from program import bank
+from program import savings
 
 if __name__ == "__main__":
     b = bank.BankAccount("БвБ", 1.1)
@@ -28,3 +29,6 @@ if __name__ == "__main__":
     b.deposit(2.5)
     print(f"Баланс {b.owner}: {b.get_balance}")
     print(dir(bank.BankAccount))
+
+    ss = savings.SavingsAccount("Alice", 1000.0, 0.05)
+    print(f"У друшому класі баланс: {ss.balance}")
