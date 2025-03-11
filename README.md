@@ -3,6 +3,8 @@
 
 ![GitHub Pipenv locked dependency version (branch)](https://img.shields.io/github/pipenv/locked/dependency-version/bobasb/2024_kn41_nm/testing%2F1_lab%2Fenv_with_pipenv%2F/main)
 
+[![codecov](https://codecov.io/gh/BobasB/2024_kn41_nm/graph/badge.svg?token=ZHKOS5VG65)](https://codecov.io/gh/BobasB/2024_kn41_nm)
+
 
 # Лабораторні роботи з предмету "Чисельні методи", "Методи Мат-моделювання" та "Тестування"
 
