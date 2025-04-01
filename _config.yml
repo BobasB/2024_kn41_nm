@@ -1,5 +1,5 @@
 title: КН-41 ММДО
 description: Лекційних та лабораторних занять. 
-remote_theme: pages-themes/hacker@v0.2.0
+remote_theme: pages-themes/dinky@v0.2.0
 plugins:
 - jekyll-remote-theme
