@@ -24,8 +24,10 @@
 
 | № | Назва роботи | Опис  | Статус      |
 |:---|:---:|---:|---:|
-| 1 | [Вступ](./init/README.md) | Налаштовуємо репозиторій та вчимось працювати з Git та з Markdown | inProgress |
-| 2 | Python | | TODO |
+| 1 | [Вступ](./numerical_methods/init/README.md) | Налаштовуємо репозиторій та вчимось працювати з Git та з Markdown | inProgress |
+| 2 | [1_](./numerical_methods/1_lab/README.md) | | TODO |
+| 3 | [2_](./numerical_methods/2_lab/README.md) | | TODO |
+| 4 | [3_](./numerical_methods/3_lab/mine.ipynb) | | TODO |
 
 ### Вимоги
 Для запуску лабораторних робіт необхідно мати встановлені:
